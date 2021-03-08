@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Layout } from "antd";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import styled from "styled-components";
+import Body from "../src/components/Body";
+import "./App.css";
+import Foot from "./components/Foot";
+import NavBar from "./components/NavBar";
 
-function App() {
+const AppWrapper = styled.div`
+  display: flex;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+      <BrowserRouter>
+        <Layout>
+          <NavBar />
+          <Body />
+          <Foot />
+        </Layout>
+      </BrowserRouter>
+    </AppWrapper>
   );
-}
+};
 
 export default App;
