@@ -10,19 +10,29 @@ import { useHistory } from "react-router";
 
 const NavBar = () => {
   const history = useHistory();
-
-  console.log("history", history.location);
   return (
     <Header style={{ background: "white" }}>
       <Menu mode="horizontal">
-        <Menu.Item key="groovy" icon={<HomeOutlined />}>
-          Groovy
+        <Menu.Item
+          key="home"
+          icon={<HomeOutlined />}
+          onClick={() => history.push("/")}
+        >
+          Home
         </Menu.Item>
-        <Menu.Item key="cool" icon={<AppstoreOutlined />}>
-          Cool
+        <Menu.Item
+          key="about"
+          icon={<AppstoreOutlined />}
+          onClick={() => history.push("/about")}
+        >
+          About
         </Menu.Item>
-        <Menu.Item key="settings" icon={<SettingOutlined />}>
-          Settings
+        <Menu.Item
+          key="Contact"
+          icon={<SettingOutlined />}
+          onClick={() => history.push("/contact")}
+        >
+          Contact
         </Menu.Item>
       </Menu>
     </Header>

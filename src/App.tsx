@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 
 const AppWrapper = styled.div`
   display: flex;
+  height: 100vh;
 `;
 
 const App = () => {
